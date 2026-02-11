@@ -1,12 +1,15 @@
-
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-// Ganti 'nexus-pos' dengan nama repository GitHub kamu jika berbeda
 export default defineConfig({
   plugins: [react()],
-  base: './', 
+  base: './',
+  server: {
+    port: 3000,
+    open: true
+  },
   build: {
     outDir: 'dist',
+    sourcemap: false
   }
 });
